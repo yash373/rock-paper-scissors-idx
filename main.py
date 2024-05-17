@@ -31,7 +31,7 @@ def display_score(comp,user,win_msg):
     elif user.score > comp.score:
         print(f"Player is {win_msg}")
 
-turns = 3
+turns = int(input("Enter the number of turns you want to play for: "))
 computer = Comp()
 player = User()
 assets = ["Scissors","Rock","Paper"]
