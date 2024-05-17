@@ -44,7 +44,7 @@ for i in range(turns):
 
     # change scores
     result = eval(computer_input, user_input)
-    if result == 0:
+    if result == -1:
         print("Draw")
         computer.increase_point()
         player.increase_point()
