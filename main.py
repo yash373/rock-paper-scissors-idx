@@ -27,9 +27,9 @@ def display_score(comp,user,win_msg):
     if comp.score == user.score:
         pass
     elif comp.score > user.score:
-        print(f"Computer is {win_msg}")
+        print(f"Computer {win_msg}")
     elif user.score > comp.score:
-        print(f"Player is {win_msg}")
+        print(f"Player {win_msg}")
 
 turns = int(input("Enter the number of turns you want to play for: "))
 computer = Comp()
@@ -54,7 +54,7 @@ for i in range(turns):
         computer.increase_point()
 
     # display score
-    display_score(comp=computer, user=player, win_msg="in the lead")
+    display_score(comp=computer, user=player, win_msg="is in the lead")
 
 # display score
 display_score(comp=computer, user=player, win_msg="has won!")
