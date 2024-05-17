@@ -32,11 +32,14 @@ def display_score(comp,user,win_msg):
         print(f"Player {win_msg}")
 
 turns = int(input("Enter the number of turns you want to play for: "))
+print("\n")
 computer = Comp()
 player = User()
 assets = ["Scissors","Rock","Paper"]
 
-for i in range(turns):  
+for i in range(turns):
+    print(f"Turn: {i+1}\n")
+
     # take inputs
     user_input = player.get_user_input()
     computer_input = computer.pick()
@@ -49,12 +52,14 @@ for i in range(turns):
         computer.increase_point()
         player.increase_point()
     if result == 1:
+        print("Player won the turn")
         player.increase_point()
     if result == 2:
+        print("Computer won the turn")
         computer.increase_point()
 
     # display score
-    display_score(comp=computer, user=player, win_msg="is in the lead")
+    display_score(comp=computer, user=player, win_msg="is in the lead\n\n")
 
 # display score
 display_score(comp=computer, user=player, win_msg="has won!")
